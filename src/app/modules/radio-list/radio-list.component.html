@@ -1,0 +1,15 @@
+<form>
+  <ul class="radio-list-wrapper">
+    <li *ngFor="let radio of radioList">
+      <label class="radio-label" title="{{radio.name}}">
+        <input
+          type="radio"
+          value="{{radio.id}}"
+          [checked]="radio.selected"
+          [formControl]="radioListControl"
+        >
+        {{radio.name}}
+      </label>
+    </li>
+  </ul>
+</form>
